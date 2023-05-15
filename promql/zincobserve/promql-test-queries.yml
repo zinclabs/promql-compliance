@@ -1,0 +1,18 @@
+test_cases:
+  # Scalar literals.
+  - query: '42'
+  - query: '1.234'
+  - query: '.123'
+  - query: '1.23e-3'
+  - query: '0x3d'
+  - query: 'Inf'
+  - query: '+Inf'
+  - query: '-Inf'
+  - query: 'NaN'
+
+  # Vector selectors.
+  # TODO: Add tests for staleness support.
+  - query: 'zo_storage_original_bytes'
+  - query: '{__name__="zo_storage_original_bytes"}'
+  - query: 'zo_storage_original_bytes{stream="zo_response_code"}'
+  - query: 'zo_storage_original_bytes{stream!="zo_response_code"}'
